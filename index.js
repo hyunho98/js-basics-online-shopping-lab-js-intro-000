@@ -63,10 +63,10 @@ function removeFromCart(item) {
       cart.splice(i, 1);
       return cart;
     }
+    i++;
     if (i > cart.length) {
       return "That item is not in your cart.";
     }
-    i++;
   }
 }
 
