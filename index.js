@@ -29,7 +29,7 @@ function viewCart() {
     for (var i = 0; i < cart.length - 1; i++){
       output = output + `${cart[i].itemName} at $${cart[i].itemPrice}, `;
     }
-    return output + `and ${cart[i+1].itemName} at $${cart[i+1].itemPrice}.`;
+    return output + `and ${cart[i].itemName} at $${cart[i].itemPrice}.`;
   }
   else {
     return "Your shopping cart is empty.";
