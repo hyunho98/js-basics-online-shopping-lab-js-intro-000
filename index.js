@@ -24,11 +24,16 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  var output = "In your cart, you have ";
-  for (var i = 0; i > cart.length - 1; i++){
-    output = output + `${cart[i].itemName} at $${cart[i].itemPrice}, `;
+  if (cart.length > 0){
+    var output = "In your cart, you have ";
+    for (var i = 0; i > cart.length - 1; i++){
+      output = output + `${cart[i].itemName} at $${cart[i].itemPrice}, `;
+    }
+    return output + `and ${cart[i+1].itemName} at $${cart[i+1].itemPrice}.`;
   }
-  output = output + `and ${cart[i+1].itemName} at $${cart[i+1].itemPrice}.`;
+  else {
+    return "Your shopping cart is empty.";
+  }
 }
 
 function total() {
