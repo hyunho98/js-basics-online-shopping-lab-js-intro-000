@@ -60,7 +60,7 @@ function removeFromCart(item) {
 
   while (count == cart.length) {
     if (cart[i].itemName == item) {
-      array.splice(i, 1);
+      cart.splice(i, 1);
       return cart;
     }
     if (i > cart.length) {
